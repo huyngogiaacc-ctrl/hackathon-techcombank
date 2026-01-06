@@ -391,6 +391,24 @@
     .ai-suggestions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 25px; }
     .ai-chip { padding: 8px 15px; background: #f0f0f0; border-radius: 20px; font-size: 12px; color: #555; cursor: pointer; }
     .ai-chip:hover { background: #1a5f7a; color: #fff; }
+    .ai-profile-summary { background: #e8f4f8; border-radius: 12px; padding: 15px; margin-bottom: 15px; }
+    .ai-summary-title { font-size: 13px; font-weight: 600; color: #1a5f7a; margin-bottom: 10px; }
+    .ai-summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .ai-summary-item { font-size: 12px; color: #555; display: flex; align-items: center; gap: 6px; }
+    .ai-needs-section { background: #fff8f0; border-radius: 12px; padding: 15px; margin-bottom: 15px; }
+    .ai-needs-title { font-size: 13px; font-weight: 600; color: #c41e3a; margin-bottom: 10px; }
+    .ai-needs-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .ai-need-item { padding: 6px 12px; background: #fff; border-radius: 15px; font-size: 11px; color: #555; border: 1px solid #ddd; }
+    .ai-need-item.active { background: linear-gradient(135deg, #c41e3a, #d4a574); color: #fff; border: none; }
+    .ai-recommendations { margin-bottom: 15px; }
+    .ai-rec-title { font-size: 14px; font-weight: 600; color: #1a5f7a; margin-bottom: 12px; }
+    .ai-rec-list { display: flex; flex-direction: column; gap: 10px; max-height: 250px; overflow-y: auto; }
+    .ai-rec-card { display: flex; gap: 12px; padding: 12px; background: #faf6f1; border-radius: 12px; border-left: 3px solid #1a5f7a; }
+    .ai-rec-icon { font-size: 24px; }
+    .ai-rec-content { flex: 1; }
+    .ai-rec-name { font-size: 13px; font-weight: 600; color: #333; margin-bottom: 4px; }
+    .ai-rec-desc { font-size: 11px; color: #777; margin-bottom: 4px; }
+    .ai-rec-benefit { font-size: 11px; color: #4caf50; font-weight: 500; }
     .simulator-section { background: #faf6f1; border-radius: 16px; padding: 20px; }
     .simulator-title { font-size: 15px; font-weight: 600; color: #1a5f7a; margin-bottom: 15px; }
     .simulator-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
@@ -1358,9 +1376,38 @@
             <span class="badge-complete">✓ Đã hoàn thành</span>
           </div>
           <div class="info-row"><span class="info-label">Họ và tên</span><span class="info-value">Nguyễn Văn A</span></div>
-          <div class="info-row"><span class="info-label">CCCD/CMND</span><span class="info-value">0123456789xx</span></div>
-          <div class="info-row"><span class="info-label">Ngày sinh</span><span class="info-value">01/01/1990</span></div>
-          <div class="info-row"><span class="info-label">Địa chỉ thường trú</span><span class="info-value">TP. Hồ Chí Minh</span></div>
+          <div class="info-row"><span class="info-label">CCCD/CMND</span><span class="info-value">079091001234</span></div>
+          <div class="info-row"><span class="info-label">Ngày sinh</span><span class="info-value">15/03/1991 (35 tuổi)</span></div>
+          <div class="info-row"><span class="info-label">Địa chỉ thường trú</span><span class="info-value">Chung cư Vinhomes Central Park, Bình Thạnh, TP.HCM</span></div>
+        </div>
+        
+        <div class="info-group">
+          <div class="info-group-header">
+            <div class="info-group-title">Thông tin gia đình</div>
+          </div>
+          <div class="info-row"><span class="info-label">Tình trạng hôn nhân</span><span class="info-value">Đã kết hôn</span></div>
+          <div class="info-row"><span class="info-label">Số con</span><span class="info-value">2 con (Bé trai 10 tuổi, Bé gái 7 tuổi)</span></div>
+          <div class="info-row"><span class="info-label">Cha mẹ bên nội</span><span class="info-value">Ông 65 tuổi, Bà 60 tuổi</span></div>
+          <div class="info-row"><span class="info-label">Cha mẹ bên ngoại</span><span class="info-value">Ông 80 tuổi, Bà 78 tuổi</span></div>
+          <div class="info-row"><span class="info-label">Số người phụ thuộc</span><span class="info-value">6 người (2 con + 4 cha mẹ)</span></div>
+        </div>
+
+        <div class="info-group">
+          <div class="info-group-header">
+            <div class="info-group-title">Thông tin tài chính</div>
+          </div>
+          <div class="info-row"><span class="info-label">Thu nhập hàng tháng</span><span class="info-value" style="color:#4caf50;font-weight:600;">100,000,000đ</span></div>
+          <div class="info-row"><span class="info-label">Chi phí sinh hoạt</span><span class="info-value" style="color:#c41e3a;">50,000,000đ/tháng</span></div>
+          <div class="info-row"><span class="info-label">Tiết kiệm hàng tháng</span><span class="info-value" style="color:#1a5f7a;font-weight:600;">50,000,000đ (50%)</span></div>
+        </div>
+
+        <div class="info-group">
+          <div class="info-group-header">
+            <div class="info-group-title">Tài sản hiện có</div>
+          </div>
+          <div class="info-row"><span class="info-label">Bất động sản</span><span class="info-value">Căn hộ chung cư 2PN (~3.5 tỷ)</span></div>
+          <div class="info-row"><span class="info-label">Phương tiện</span><span class="info-value">1 xe ô tô (~800 triệu)</span></div>
+          <div class="info-row"><span class="info-label">Tổng tài sản ước tính</span><span class="info-value" style="color:#1a5f7a;font-weight:600;">~4.3 tỷ</span></div>
         </div>
       </div>
 
@@ -1768,57 +1815,118 @@
       <span class="modal-close" onclick="closeModal('aiModal')">&times;</span>
       <div class="ai-header">
         <div class="ai-avatar"><i class="ph-duotone ph-robot"></i></div>
-        <div class="ai-greeting">Xin chào! Tôi là trợ lý tài chính của bạn</div>
+        <div class="ai-greeting">Xin chào anh Nguyễn Văn A! Tôi là trợ lý tài chính của anh</div>
       </div>
       <div class="ai-search-box">
-        <input type="text" class="ai-input" id="aiSearchInput" placeholder="Kể tôi nghe bạn cần gì..." onkeypress="if(event.key==='Enter')goToSearchPage()">
+        <input type="text" class="ai-input" id="aiSearchInput" placeholder="Kể tôi nghe anh cần gì..." onkeypress="if(event.key==='Enter')goToSearchPage()">
         <button class="ai-send" onclick="goToSearchPage()">➤</button>
       </div>
       
-      <div class="ai-suggestions" id="aiSuggestions">
-        <span class="ai-chip" onclick="searchByChip('mua nhà')">Tôi muốn mua nhà</span>
-        <span class="ai-chip" onclick="searchByChip('tiết kiệm')">Tư vấn tiết kiệm</span>
-        <span class="ai-chip" onclick="searchByChip('thẻ tín dụng')">So sánh thẻ tín dụng</span>
+      <div class="ai-profile-summary">
+        <div class="ai-summary-title">📋 Hồ sơ của anh</div>
+        <div class="ai-summary-grid">
+          <div class="ai-summary-item"><span>👨‍👩‍👧‍👦</span> Gia đình 4 người + 4 cha mẹ</div>
+          <div class="ai-summary-item"><span>💰</span> Thu nhập: 100tr/tháng</div>
+          <div class="ai-summary-item"><span>🏠</span> Căn hộ 2PN + 1 xe hơi</div>
+          <div class="ai-summary-item"><span>📈</span> Tiết kiệm: 50tr/tháng</div>
+        </div>
+      </div>
+
+      <div class="ai-needs-section">
+        <div class="ai-needs-title">🎯 Nhu cầu của anh</div>
+        <div class="ai-needs-list">
+          <div class="ai-need-item active">🎓 Cho con đi du học</div>
+          <div class="ai-need-item active">🏥 Chăm sóc sức khỏe 3 thế hệ</div>
+          <div class="ai-need-item active">📈 Tích lũy & đầu tư gia tăng tài sản</div>
+          <div class="ai-need-item active">🏢 Vay mua nhà cho thuê</div>
+          <div class="ai-need-item active">✈️ Du lịch gia đình mỗi năm</div>
+        </div>
+      </div>
+
+      <div class="ai-recommendations">
+        <div class="ai-rec-title">💡 Giải pháp đề xuất cho anh</div>
+        <div class="ai-rec-list">
+          <div class="ai-rec-card">
+            <div class="ai-rec-icon">🛡️</div>
+            <div class="ai-rec-content">
+              <div class="ai-rec-name">Bảo hiểm TCB Life - An Tâm 3 Thế Hệ</div>
+              <div class="ai-rec-desc">Bảo vệ toàn diện cho cả gia đình: 2 con nhỏ + 4 cha mẹ cao tuổi</div>
+              <div class="ai-rec-benefit">✓ Chi trả viện phí không giới hạn cho cha mẹ 60-80 tuổi</div>
+            </div>
+          </div>
+          <div class="ai-rec-card">
+            <div class="ai-rec-icon">🎓</div>
+            <div class="ai-rec-content">
+              <div class="ai-rec-name">Tiết kiệm Du học - Education Plus</div>
+              <div class="ai-rec-desc">Tích lũy học phí du học cho 2 con trong 8-10 năm</div>
+              <div class="ai-rec-benefit">✓ Lãi suất 7%/năm + Thưởng khi đạt mục tiêu</div>
+            </div>
+          </div>
+          <div class="ai-rec-card">
+            <div class="ai-rec-icon">🏢</div>
+            <div class="ai-rec-content">
+              <div class="ai-rec-name">Vay mua BĐS cho thuê - Investor Home</div>
+              <div class="ai-rec-desc">Vay đến 70% giá trị, lãi 0% năm đầu với Masterise</div>
+              <div class="ai-rec-benefit">✓ Thu nhập thụ động 15-20tr/tháng từ cho thuê</div>
+            </div>
+          </div>
+          <div class="ai-rec-card">
+            <div class="ai-rec-icon">💳</div>
+            <div class="ai-rec-content">
+              <div class="ai-rec-name">Thẻ Visa Platinum Travel</div>
+              <div class="ai-rec-desc">Hoàn tiền 5% du lịch, miễn phí phòng chờ sân bay</div>
+              <div class="ai-rec-benefit">✓ Tích dặm bay cho cả gia đình 6 người</div>
+            </div>
+          </div>
+          <div class="ai-rec-card">
+            <div class="ai-rec-icon">🌍</div>
+            <div class="ai-rec-content">
+              <div class="ai-rec-name">Chuyển tiền quốc tế - Global Transfer</div>
+              <div class="ai-rec-desc">Phí 0đ chuyển tiền du học, tỷ giá ưu đãi</div>
+              <div class="ai-rec-benefit">✓ Chuẩn bị sẵn cho con du học tương lai</div>
+            </div>
+          </div>
+        </div>
       </div>
       
       <div class="simulator-section" id="simulatorSection">
-        <div class="simulator-title"><i class="ph-duotone ph-chart-line-up"></i> Giả lập tài chính của bạn</div>
+        <div class="simulator-title"><i class="ph-duotone ph-chart-line-up"></i> Giả lập tài chính của anh</div>
         <div class="simulator-grid">
           <div class="sim-item">
             <label>Thu nhập hàng tháng</label>
-            <input type="text" class="sim-input" id="simIncome" value="45,000,000" oninput="updateSimulator()">
+            <input type="text" class="sim-input" id="simIncome" value="100,000,000" oninput="updateSimulator()">
           </div>
           <div class="sim-item">
             <label>Chi tiêu hàng tháng</label>
-            <input type="text" class="sim-input" id="simExpense" value="30,000,000" oninput="updateSimulator()">
+            <input type="text" class="sim-input" id="simExpense" value="50,000,000" oninput="updateSimulator()">
           </div>
           <div class="sim-item">
             <label>Tiết kiệm hiện tại</label>
-            <input type="text" class="sim-input" id="simSaving" value="200,000,000" oninput="updateSimulator()">
+            <input type="text" class="sim-input" id="simSaving" value="500,000,000" oninput="updateSimulator()">
           </div>
           <div class="sim-item">
-            <label>Mục tiêu (VD: mua nhà 3 tỷ)</label>
-            <input type="text" class="sim-input" id="simGoal" value="3,000,000,000" oninput="updateSimulator()">
+            <label>Mục tiêu (VD: BĐS cho thuê 5 tỷ)</label>
+            <input type="text" class="sim-input" id="simGoal" value="5,000,000,000" oninput="updateSimulator()">
           </div>
         </div>
         <div class="sim-result">
           <div class="sim-result-title">Kết quả giả lập</div>
           <div class="sim-stats">
             <div class="sim-stat">
-              <div class="sim-stat-value" id="simMonthly">15tr</div>
+              <div class="sim-stat-value" id="simMonthly">50tr</div>
               <div class="sim-stat-label">Tiết kiệm/tháng</div>
             </div>
             <div class="sim-stat">
-              <div class="sim-stat-value" id="simTime">~16 năm</div>
+              <div class="sim-stat-value" id="simTime">~7.5 năm</div>
               <div class="sim-stat-label">Thời gian đạt mục tiêu</div>
             </div>
             <div class="sim-stat">
-              <div class="sim-stat-value" id="simAdvice">Cần vay</div>
+              <div class="sim-stat-value" id="simAdvice">Vay + Tiết kiệm</div>
               <div class="sim-stat-label">Gợi ý</div>
             </div>
           </div>
           <div class="sim-recommendation">
-            <i class="ph-duotone ph-lightbulb"></i> <strong>Gợi ý:</strong> Với mục tiêu 3 tỷ, bạn nên xem xét vay mua nhà với lãi suất ưu đãi 0% năm đầu từ Techcombank x Masterise
+            <i class="ph-duotone ph-lightbulb"></i> <strong>Gợi ý:</strong> Với thu nhập 100tr/tháng và tiết kiệm 50%, anh có thể vay 3.5 tỷ mua BĐS cho thuê ngay, vừa trả góp vừa có thu nhập thụ động 15-20tr/tháng!
           </div>
         </div>
       </div>
