@@ -496,6 +496,57 @@
     .register-method { display: flex; gap: 10px; margin-bottom: 20px; }
     .method-btn { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 10px; background: #fff; cursor: pointer; font-size: 13px; }
     .method-btn.active { border-color: #1a5f7a; background: #e8f4f8; color: #1a5f7a; }
+
+    /* Responsive Mobile */
+    @media (max-width: 768px) {
+      .header { padding: 10px 15px; flex-wrap: wrap; gap: 10px; }
+      .logo-ecosystem img { height: 40px; }
+      .header-actions { gap: 5px; }
+      .btn { padding: 8px 12px; font-size: 12px; }
+      .navigator { gap: 15px; padding: 12px 15px; overflow-x: auto; justify-content: flex-start; }
+      .nav-item { font-size: 13px; white-space: nowrap; }
+      .main-content { padding: 15px; }
+      .section-title { font-size: 16px; }
+      .card-grid { grid-template-columns: 1fr; gap: 15px; }
+      .card { padding: 15px; }
+      .dashboard-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .dashboard-grid { grid-template-columns: 1fr; }
+      .widget-large { grid-column: span 1; }
+      .chart-container { flex-direction: column; gap: 15px; }
+      .pie-chart { width: 120px; height: 120px; }
+      .pie-center { width: 70px; height: 70px; }
+      .pie-total { font-size: 14px; }
+      .profile-header { flex-direction: column; text-align: center; }
+      .profile-completion { text-align: center; }
+      .profile-benefits { flex-direction: column; }
+      .benefit-item.link-cta { flex-direction: column; text-align: center; }
+      .profile-tabs { flex-wrap: wrap; gap: 8px; }
+      .profile-tab { padding: 10px 12px; font-size: 12px; }
+      .form-row { flex-direction: column; }
+      .info-row { flex-direction: column; gap: 5px; }
+      .info-label { width: 100%; }
+      .link-card { flex-direction: column; text-align: center; }
+      .privacy-item { flex-direction: column; gap: 10px; text-align: center; }
+      .privacy-info { flex-direction: column; }
+      .needs-bubbles { justify-content: center; }
+      .bubble { font-size: 11px; padding: 6px 12px; }
+      .bubble.active.large { font-size: 12px; padding: 8px 14px; }
+      .product-category { padding: 15px; }
+      .product-list { gap: 10px; }
+      .product-card { min-width: 160px; padding: 12px; }
+      .news-grid { grid-template-columns: 1fr; }
+      .horizontal-scroll { gap: 10px; }
+      .modal { width: 95%; padding: 20px; max-height: 85vh; }
+      .modal-ai { width: 95%; }
+      .simulator-grid { grid-template-columns: 1fr; }
+      .sim-stats { flex-direction: column; gap: 10px; }
+      .ai-assistant { left: 15px; bottom: 15px; }
+      .ai-icon { width: 50px; height: 50px; font-size: 24px; }
+      .ai-pulse { width: 50px; height: 50px; }
+      .ai-search-box { flex-direction: column; }
+      .ai-send { width: 100%; height: 45px; border-radius: 25px; }
+      .ai-suggestions { justify-content: center; }
+    }
   </style>
 </head>
 <body>
