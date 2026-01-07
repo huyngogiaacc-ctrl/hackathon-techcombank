@@ -2,8 +2,10 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hệ Sinh Thái - Techcombank</title>
+  <meta name="description" content="Trang web demo mẫu giao diện hệ sinh thái tài chính - Không phải dịch vụ thật">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="disclaimer" content="Demo website - Not a real financial service">
+  <title>[DEMO] Hệ Sinh Thái - Mẫu Giao Diện</title>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -568,15 +570,19 @@
   </style>
 </head>
 <body>
+  <!-- Demo Warning Banner -->
+  <div style="background: #ff6b6b; color: white; text-align: center; padding: 10px; font-weight: bold; position: sticky; top: 0; z-index: 1001;">
+    ⚠️ TRANG WEB DEMO - KHÔNG PHẢI DỊCH VỤ THẬT - CHỈ MẪU GIAO DIỆN ⚠️
+  </div>
 
   <header class="header">
     <div class="logo-ecosystem">
       <img src="public/logo-cropped.jpg" alt="Hệ sinh thái" class="logo-main">
     </div>
     <div class="header-actions">
-      <button class="btn btn-login" onclick="openModal('loginModal')">Đăng nhập</button>
-      <button class="btn btn-register" onclick="openModal('registerModal')">Đăng ký</button>
-      <button class="btn btn-profile" onclick="showPage('profile')">My Profile</button>
+      <button class="btn btn-login" onclick="alert('Đây là trang demo - không có chức năng thật')">Đăng nhập (Demo)</button>
+      <button class="btn btn-register" onclick="alert('Đây là trang demo - không có chức năng thật')">Đăng ký (Demo)</button>
+      <button class="btn btn-profile" onclick="showPage('profile')">My Profile (Demo)</button>
     </div>
   </header>
 
@@ -1715,6 +1721,13 @@
       </div>
     </div>
   </main>
+
+  <!-- Disclaimer Footer -->
+  <footer style="background: #333; color: white; text-align: center; padding: 20px; margin-top: 40px;">
+    <p><strong>TUYÊN BỐ MIỄN TRÁCH NHIỆM</strong></p>
+    <p>Đây là trang web demo/mẫu giao diện, không phải dịch vụ tài chính thật. Tất cả thông tin, logo, thương hiệu chỉ mang tính chất minh họa.</p>
+    <p>Không thực hiện bất kỳ giao dịch tài chính nào trên trang này.</p>
+  </footer>
 
   <!-- Login Modal -->
   <div class="modal-overlay" id="loginModal">
